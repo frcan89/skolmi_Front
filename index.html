@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skolmi</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="btn__header">Ingresar a Plataforma</a>
+      <div class="header__nav">
+        <a href="#">Páginas</a>
+        <a href="#">Contacto</a>
+      </div>
+    </header>
+    <div class="nav">
+      <img src="skolmilogo1.webp" alt="">
+      <ul class="nav__link">
+        <li><a href="" id="estudiantes">Estudiantes </a></li>
+        <li><a href="" id="dashboard__link">Dashboard </a></li>
+        <li><a href="" id="referidos">Referidos </a></li>
+      </ul>
+    </div>
+    <div class="banner" id="banner">
+      <img src="BANNERS-SKOLMI-1440_03.webp" alt="Banner Image" />
+      <div class="form-container">
+        <h2>Quiero Registrarme</h2>
+        <form id="contactForm" method="post">
+          <label for="name">Tu nombre</label>
+          <input type="text" id="name" name="name" required />
+          <label for="phone">Celular</label>
+          <input
+            type="number"
+            id="phone"
+            name="phone"
+            minlength="10"
+            required
+          />
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required />
+          <label for="program">Programa interesado</label>
+          <select id="program" name="program">
+            <option value="program1">Programa 1</option>
+            <option value="program2">Programa 2</option>
+            <option value="program3">Programa 3</option>
+          </select>
+          <button type="submit">¡Listo!</button>
+        </form>
+        <p>
+          Al registrarme, acepto los
+          <a href="#">Términos y Condiciones</a>
+        </p>
+      </div>
+    </div>
+    <div class="container mt-5" id="registro">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <!-- Título del Formulario -->
+          <h2 class="text-center mb-4">Registro de Alumnos</h2>
+
+          <!-- Formulario -->
+          <form>
+
+            <!-- Campo Usuario -->
+            <div class="mb-3">
+              <label for="usuario" class="form-label">Usuario</label>
+              <input
+                type="text"
+                class="form-control"
+                id="usuario"
+                placeholder="Ingresa el nombre de usuario"
+                required
+              />
+            </div>
+
+            <!-- Tipo de Educación -->
+            <div class="mb-3">
+              <label for="tipoEducacion" class="form-label"
+                >Tipo de Educación</label
+              >
+              <select class="form-select" id="tipoEducacion" required>
+                <option value="" disabled selected>
+                  Selecciona el tipo de educación
+                </option>
+                <option value="preescolar">Preescolar</option>
+                <option value="primaria">Primaria</option>
+                <option value="secundaria">Secundaria</option>
+                <option value="adultos">Adultos</option>
+              </select>
+            </div>
+
+            <!-- Número de Documento -->
+            <div class="mb-3">
+              <label for="documento" class="form-label"
+                >Número de Documento</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="documento"
+                placeholder="Ingresa el número de documento"
+                required
+              />
+            </div>
+
+            <!-- Sexo -->
+            <div class="mb-3">
+              <label class="form-label d-block">Sexo</label>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="sexo"
+                  id="sexoMasculino"
+                  value="masculino"
+                  required
+                />
+                <label class="form-check-label" for="sexoMasculino"
+                  >Masculino</label
+                >
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="sexo"
+                  id="sexoFemenino"
+                  value="femenino"
+                  required
+                />
+                <label class="form-check-label" for="sexoFemenino"
+                  >Femenino</label
+                >
+              </div>
+            </div>
+
+            <!-- Celular -->
+            <div class="mb-3">
+              <label for="celular" class="form-label">Número de Celular</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="celular"
+                placeholder="Ingresa el número de celular"
+                required
+              />
+            </div>
+
+            <!-- Fecha de Nacimiento -->
+            <div class="mb-3">
+              <label for="fechaNacimiento" class="form-label"
+                >Fecha de Nacimiento</label
+              >
+              <input
+                type="date"
+                class="form-control"
+                id="fechaNacimiento"
+                required
+              />
+            </div>
+
+            <!-- Dirección -->
+            <div class="mb-3">
+              <label for="direccion" class="form-label">Dirección</label>
+              <input
+                type="text"
+                class="form-control"
+                id="direccion"
+                placeholder="Ingresa la dirección"
+                required
+              />
+            </div>
+
+            <!-- Municipio -->
+            <div class="mb-3">
+              <label for="municipio" class="form-label">Municipio</label>
+              <input
+                type="text"
+                class="form-control"
+                id="municipio"
+                placeholder="Ingresa el municipio"
+                required
+              />
+            </div>
+
+            <!-- Términos y Condiciones -->
+            <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="terminos"
+                required
+              />
+              <label class="form-check-label" for="terminos">
+                Acepto los
+                <a href="#" target="_blank">Términos y Condiciones</a>
+              </label>
+            </div>
+
+            <!-- Botón de Enviar -->
+            <button type="submit" class="btn btn-primary w-100">
+              Registrar Alumno
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="dashboard" id="dashboard">
+      <iframe title="skolmi_report" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMGI5ODEzMGEtZTFlZC00ZDAzLWEwZDItN2IxYTA2YWI4ODgzIiwidCI6ImY1YjRiY2U1LTA2ZjAtNDAzNS04NjFmLWRkZWE2ZDU1YTVlOSIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+    <div class="estudiantes__data" id="estudiantes__data">
+
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+          <div class="footer-section">
+              <h3>Skolmi</h3>
+              <p>© 2024 Skolmi<br>
+              Todos los derechos<br>
+              reservados</p>
+             
+          </div>
+          <div class="footer-section">
+              <h3>Nosotros</h3>
+              <ul>
+                  <li><a href="#">Valores de marca</a></li>
+                  <li><a href="#">Política de calidad</a></li>
+                  <li><a href="#">Política de datos</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h3>Educación virtual</h3>
+              <ul>
+                  <li><a href="#">Preescolar</a></li>
+                  <li><a href="#">Primaria</a></li>
+                  <li><a href="#">Bachillerato</a></li>
+                  <li><a href="#">Adultos</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h3>Páginas</h3>
+              <ul>
+                  <li><a href="#">Jóvenes</a></li>
+                  <li><a href="#">Extradad</a></li>
+                  <li><a href="#">Adultos</a></li>
+              </ul>
+          </div>
+          <div class="footer-section social-icons">
+              <p>Encuéntranos en...</p>
+              <a href="#"><img src="facebook.dcc02b5f.svg" alt="Facebook"></a>
+              <a href="#"><img src="instagram.0ff7dc83.svg" alt="Instagram"></a>
+              <a href="#"><img src="youtube.ca85daba.svg" alt="Youtube"></a>
+              <a href="#"><img src="whatsapp.bb97712c.svg" alt="Whatsapp"></a>
+          </div>
+      </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
